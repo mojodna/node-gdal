@@ -58,6 +58,7 @@
 				"ldflags": [
 					"-Wl,-s"
 				],
+				"msbuild_toolset": "v140",
 				"msvs_settings": {
 					"VCCLCompilerTool": {
 						"ExceptionHandling": 2, # /EHsc

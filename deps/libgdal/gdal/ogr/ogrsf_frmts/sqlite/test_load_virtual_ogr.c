@@ -32,8 +32,8 @@
     /*
     / using an AMALGAMATED version of SpatiaLite
     / a private internal copy of SQLite is included:
-    / so we are required including the SpatiaLite's 
-    / own header 
+    / so we are required including the SpatiaLite's
+    / own header
     /
     / IMPORTANT NOTICE: using AMALAGATION is only
     / useful on Windows (to skip DLL hell related oddities)
@@ -60,8 +60,8 @@
 #include <unistd.h>
 #endif
 
-#if _MSC_VER
-#define snprintf _snprintf
+#if defined(_MSC_VER) && (_MSC_VER < 1900)
+#  define snprintf _snprintf
 #endif
 
 int main(int argc, char* argv[])
