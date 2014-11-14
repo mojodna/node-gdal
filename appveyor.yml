@@ -4,18 +4,18 @@ environment:
   AWS_SECRET_ACCESS_KEY:
     secure: G45Qz4paCV4VpsA939dz7i2PQiTdVOYwh1paZ3sGSdS9REKnLHB2cmToak8uAyHP
   matrix:
-    - nodejs_version: "0.10.32"
-      msvs_toolset: 12
-      PLATFORM: x64
-    - nodejs_version: "0.10.32"
-      msvs_toolset: 12
-      PLATFORM: x86
-    - nodejs_version: "0.11.13"
-      msvs_toolset: 12
-      PLATFORM: x64
-    - nodejs_version: "0.11.13"
-      msvs_toolset: 12
-      PLATFORM: x86
+    #- nodejs_version: "0.10.32"
+    #  msvs_toolset: 12
+    #  PLATFORM: x64
+    #- nodejs_version: "0.10.32"
+    #  msvs_toolset: 12
+    #  PLATFORM: x86
+    #- nodejs_version: "0.11.13"
+    #  msvs_toolset: 12
+    #  PLATFORM: x64
+    #- nodejs_version: "0.11.13"
+    #  msvs_toolset: 12
+    #  PLATFORM: x86
     - nodejs_version: "0.10.29"
       msvs_toolset: 14
       PLATFORM: x64
