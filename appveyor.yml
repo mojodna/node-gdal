@@ -28,6 +28,7 @@ artifacts:
     name: Test Logs
 
 install:
+  - SET PATH=%APPDATA%\npm;%PATH%
   # add local node to path (since we install it for msvs_toolset == 14)
   - SET PATH=%CD%;%PATH%;
   # add local node-pre-gyp dir to path
@@ -40,7 +41,11 @@ install:
   - if "%msvs_toolset%" == "14" powershell Start-FileDownload "https://mapbox.s3.amazonaws.com/node-cpp11/v$env:nodejs_version/$env:Platform/node.exe"
   - node -v
   - node -e "console.log(process.argv,process.execPath)"
-  - npm -v
+  - npm --version
+  # npm install npm -g
+  # fix for https://github.com/npm/npm/issues/6246:
+  - npm -g install npm@1.4.28
+  - npm --version
   # upgrade node-gyp to support --msvs_version=2013
   - npm install node-gyp
   # clear out node-gyp header cache
